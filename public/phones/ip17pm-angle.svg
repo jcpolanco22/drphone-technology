@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="angleChassis" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="20%" stop-color="#1f4848"/>
+      <stop offset="70%" stop-color="#0c2020"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="screenPerspective" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a202c"/>
+      <stop offset="50%" stop-color="#1f4848"/>
+      <stop offset="100%" stop-color="#0a0c10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Isometric / 3D Angled Phone Silhouette -->
+  <!-- Shadow -->
+  <path d="M 120,700 L 280,820 L 490,750 L 330,640 Z" fill="rgba(0,0,0,0.3)" filter="blur(20px)"/>
+
+  <!-- Back Chassis (Angled) -->
+  <polygon points="170,120 400,190 350,780 120,710" fill="url(#angleChassis)" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
+
+  <!-- Brushed Titanium Rim -->
+  <polygon points="120,710 350,780 350,798 120,728" fill="#2b2b30"/>
+  <polygon points="350,780 400,190 412,194 350,798" fill="#3a3a42"/>
+
+  <!-- Angled Screen Plate -->
+  <polygon points="176,135 392,200 344,765 128,700" fill="url(#screenPerspective)"/>
+
+  <!-- Screen Content Angle Line -->
+  <line x1="180" y1="350" x2="370" y2="410" stroke="#ffffff" stroke-opacity="0.2" stroke-width="3"/>
+  <line x1="170" y1="450" x2="360" y2="510" stroke="#ffffff" stroke-opacity="0.15" stroke-width="3"/>
+
+  <!-- Action Button / Volume Rocker on Side Frame -->
+  <polygon points="112,280 119,282 119,340 112,338" fill="#55555c"/>
+  <polygon points="112,370 119,372 119,450 112,448" fill="#55555c"/>
+
+  <!-- Dynamic Island Angled -->
+  <polygon points="260,185 305,198 302,207 257,194" fill="#000000"/>
+
+  <text x="300" y="850" text-anchor="middle" fill="#ffffff" opacity="0.4" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" letter-spacing="2">IPHONE 17 PRO MAX • VISTA 3D</text>
+</svg>

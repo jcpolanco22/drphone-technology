@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0e14"/>
+      <stop offset="30%" stop-color="#121824"/>
+      <stop offset="70%" stop-color="#1a365d"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30" result="blur"/>
+    </filter>
+  </defs>
+
+  <!-- Shadow -->
+  <rect x="110" y="55" width="380" height="790" rx="64" ry="64" fill="rgba(0,0,0,0.28)" filter="blur(16px)"/>
+
+  <!-- Phone Titanium Frame (Razor Thin Bezel) -->
+  <rect x="100" y="45" width="400" height="810" rx="66" ry="66" fill="#1c1b1f" stroke="#44444a" stroke-width="2"/>
+
+  <!-- Super Retina XDR OLED Display -->
+  <rect x="106" y="51" width="388" height="798" rx="60" ry="60" fill="url(#screenGrad)"/>
+
+  <!-- Glowing Wallpaper Graphic -->
+  <circle cx="300" cy="500" r="180" fill="#1a365d" opacity="0.3" filter="url(#glow)"/>
+  <ellipse cx="260" cy="400" rx="140" ry="90" fill="#ffffff" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Status Bar Time -->
+  <text x="160" y="105" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="18" font-weight="700">9:41</text>
+  
+  <!-- Status Bar Icons (5G, WiFi, Battery) -->
+  <g transform="translate(415, 92)" fill="#ffffff">
+    <!-- Signal -->
+    <rect x="0" y="10" width="3" height="5" rx="1"/>
+    <rect x="5" y="7" width="3" height="8" rx="1"/>
+    <rect x="10" y="4" width="3" height="11" rx="1"/>
+    <rect x="15" y="1" width="3" height="14" rx="1"/>
+    <!-- Battery -->
+    <rect x="25" y="2" width="22" height="12" rx="3" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="27" y="4" width="16" height="8" rx="1.5" fill="#4cd964"/>
+    <rect x="48" y="6" width="2" height="4" rx="1" fill="#fff"/>
+  </g>
+
+  <!-- Dynamic Island (Pill) -->
+  <g transform="translate(300, 96)">
+    <rect x="-65" y="-14" width="130" height="28" rx="14" ry="14" fill="#000000"/>
+    <circle cx="35" cy="0" r="5.5" fill="#0a192f"/>
+    <circle cx="35" cy="0" r="3.5" fill="#050811"/>
+    <circle cx="36" cy="-1" r="1.5" fill="#64b5f6" opacity="0.5"/>
+    <circle cx="-35" cy="0" r="4.5" fill="#050811"/>
+  </g>
+
+  <!-- Lockscreen / Clock Widget Preview -->
+  <text x="300" y="270" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="64" font-weight="300" opacity="0.95">12:30</text>
+  <text x="300" y="310" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="16" font-weight="500" opacity="0.8">DrPhone Technology • Santo Domingo</text>
+
+  <!-- Bottom Home Indicator Bar -->
+  <rect x="230" y="828" width="140" height="4.5" rx="2.5" fill="#ffffff" opacity="0.75"/>
+</svg>

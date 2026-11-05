@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="100%" height="100%">
+  <defs>
+    <!-- Titanium Body Gradient -->
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6e7075"/>
+      <stop offset="35%" stop-color="#55575b"/>
+      <stop offset="70%" stop-color="#6e7075"/>
+      <stop offset="100%" stop-color="#3b3c3e"/>
+    </linearGradient>
+    
+    <!-- Chamfered Edge Highlight -->
+    <linearGradient id="edgeHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="5%" stop-color="#7a7c82" stop-opacity="0.6"/>
+      <stop offset="95%" stop-color="#7a7c82" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Camera Plateau Shadow -->
+    <filter id="plateauShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="3" dy="5" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    
+    <!-- Lens Reflection -->
+    <radialGradient id="lensReflect" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#64b5f6" stop-opacity="0.65"/>
+      <stop offset="30%" stop-color="#1565c0" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#0d1b2a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </radialGradient>
+
+    <radialGradient id="flashGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff9c4"/>
+      <stop offset="70%" stop-color="#ffee58"/>
+      <stop offset="100%" stop-color="#fbc02d"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outer Shadow -->
+  <rect x="110" y="55" width="380" height="790" rx="64" ry="64" fill="rgba(0,0,0,0.25)" filter="blur(16px)"/>
+
+  <!-- Phone Titanium Chassis Edge -->
+  <rect x="100" y="45" width="400" height="810" rx="66" ry="66" fill="url(#edgeHighlight)" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1.5"/>
+  
+  <!-- Antenna Bands -->
+  <rect x="99" y="160" width="402" height="4" fill="#333333" opacity="0.35"/>
+  <rect x="99" y="730" width="402" height="4" fill="#333333" opacity="0.35"/>
+
+  <!-- Matte Glass / Titanium Back Plate -->
+  <rect x="106" y="51" width="388" height="798" rx="60" ry="60" fill="url(#bodyGrad)"/>
+
+  <!-- Subtle Frosted Glass Sheen -->
+  <path d="M 106,120 Q 300,50 494,180 L 494,51 Q 494,51 440,51 L 160,51 Q 106,51 106,105 Z" fill="#ffffff" opacity="0.08"/>
+
+  <!-- Camera Island Plateau (Rounded Square) -->
+  <g filter="url(#plateauShadow)">
+    <rect x="135" y="80" width="195" height="205" rx="42" ry="42" fill="#5e6064" stroke="#8a8d94" stroke-opacity="0.3" stroke-width="1.5"/>
+  </g>
+
+  <!-- Top-Left Lens -->
+  <g transform="translate(185, 135)">
+    <circle cx="0" cy="0" r="42" fill="#8a8d94" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2"/>
+    <circle cx="0" cy="0" r="38" fill="#111111"/>
+    <circle cx="0" cy="0" r="32" fill="url(#lensReflect)"/>
+    <circle cx="-10" cy="-10" r="10" fill="#ffffff" opacity="0.3"/>
+    <circle cx="6" cy="6" r="4" fill="#ffffff" opacity="0.15"/>
+  </g>
+
+  <!-- Bottom-Left Lens -->
+  <g transform="translate(185, 230)">
+    <circle cx="0" cy="0" r="42" fill="#8a8d94" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2"/>
+    <circle cx="0" cy="0" r="38" fill="#111111"/>
+    <circle cx="0" cy="0" r="32" fill="url(#lensReflect)"/>
+    <circle cx="-10" cy="-10" r="10" fill="#ffffff" opacity="0.3"/>
+    <circle cx="6" cy="6" r="4" fill="#ffffff" opacity="0.15"/>
+  </g>
+
+  <!-- Right Lens (Telephoto / Periscope) -->
+  <g transform="translate(280, 182)">
+    <circle cx="0" cy="0" r="42" fill="#8a8d94" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2"/>
+    <circle cx="0" cy="0" r="38" fill="#111111"/>
+    <circle cx="0" cy="0" r="32" fill="url(#lensReflect)"/>
+    <circle cx="-10" cy="-10" r="10" fill="#ffffff" opacity="0.3"/>
+    <circle cx="6" cy="6" r="4" fill="#ffffff" opacity="0.15"/>
+  </g>
+
+  <!-- TrueTone Dual Flash -->
+  <circle cx="280" cy="115" r="14" fill="url(#flashGrad)" stroke="#cccccc" stroke-width="1"/>
+
+  <!-- LiDAR Sensor -->
+  <circle cx="280" cy="250" r="12" fill="#1a1a1a" stroke="#444" stroke-width="1.5"/>
+  <circle cx="280" cy="250" r="6" fill="#000000"/>
+
+  <!-- Microphone Hole -->
+  <circle cx="240" cy="250" r="3.5" fill="#1a1a1a"/>
+
+  <!-- Center Logo (Subtle Minimalist Emblem) -->
+  <g transform="translate(300, 450)" opacity="0.25">
+    <path d="M 0,-30 C 12,-30 22,-20 22,-6 C 22,12 10,24 0,30 C -10,24 -22,12 -22,-6 C -22,-20 -12,-30 0,-30 Z" fill="#ffffff"/>
+    <circle cx="0" cy="-38" r="4" fill="#ffffff"/>
+  </g>
+
+  <!-- Model Title Stamp (Subtle) -->
+  <text x="300" y="780" text-anchor="middle" fill="#ffffff" opacity="0.4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" letter-spacing="3">SAMSUNG GALAXY S25 ULTRA TITANIUM GRAY</text>
+</svg>
