@@ -4,7 +4,7 @@ import { defaultProducts, defaultCategories, defaultSettings } from '../data/def
 const StoreContext = createContext(null);
 
 const STORAGE_KEY = 'drphone_store';
-const STORE_VERSION = 'v2_dr_rd_pesos_2026';
+const STORE_VERSION = 'v5_drphone_doctorphonemobile_real';
 
 function loadState() {
   try {

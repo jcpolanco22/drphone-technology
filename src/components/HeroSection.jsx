@@ -4,57 +4,70 @@ export default function HeroSection() {
   const { state } = useStore();
   const { settings } = state;
   
-  const whatsappUrl = `https://wa.me/${settings.whatsapp}?text=Hola! Me interesa conocer sus productos.`;
-  
-  // Split the title to apply gradient to the middle word
-  const titleParts = settings.heroTitle.split(' ');
-  const midIndex = Math.floor(titleParts.length / 2);
+  const whatsappUrl = `https://wa.me/${settings.whatsapp}?text=Hola DrPhone! Me interesa conocer los precios y disponibilidad de los últimos iPhone.`;
   
   return (
-    <section className="hero" id="hero">
-      <div className="container">
-        <div className="hero-badge animate-pulse">
-          {settings.heroBadge}
-        </div>
-        
-        <h2>
-          {titleParts.map((word, i) => (
-            <span key={i}>
-              {i === midIndex || i === midIndex + 1 ? (
-                <span className="gradient-text">{word} </span>
-              ) : (
-                word + ' '
-              )}
-            </span>
-          ))}
-        </h2>
-        
-        <p className="hero-subtitle">
-          {settings.heroSubtitle}
-        </p>
-        
-        <div className="hero-ctas">
-          <a href="#productos" className="btn btn-primary btn-lg">
-            🛒 {settings.heroCta1} ↓
-          </a>
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg">
-            💬 {settings.heroCta2}
-          </a>
-        </div>
-        
-        <div className="trust-badges">
-          {settings.trustBadges.map((badge, i) => (
-            <div className="trust-badge" key={i}>
-              <div className="trust-badge-icon">{badge.icon}</div>
-              <div className="trust-badge-text">
-                <h4>{badge.title}</h4>
-                <p>{badge.subtitle}</p>
-              </div>
+    <section className="hero compact-hero" id="hero">
+      <div className="container hero-split-container">
+        {/* Left Column: Slogan, Subtitle & Actions */}
+        <div className="hero-content-col">
+          <div className="hero-badge">
+            <span className="badge-flag">🇩🇴</span> {settings.heroBadge || 'Santo Domingo • República Dominicana'}
+          </div>
+          
+          <h1 className="hero-main-title">
+            Los últimos iPhone y la <span className="gradient-text">mejor tecnología</span> en RD
+          </h1>
+          
+          <p className="hero-subtitle-compact">
+            {settings.heroSubtitle}
+          </p>
+          
+          <div className="hero-ctas-compact">
+            <a href="#productos" className="btn btn-primary">
+              🛒 Ver Catálogo y Precios RD$
+            </a>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp-hero">
+              💬 Pedir por WhatsApp
+            </a>
+          </div>
+          
+          {/* Compact Trust Features */}
+          <div className="hero-mini-trust">
+            <div className="mini-trust-item">
+              <span className="trust-icon">📦</span>
+              <span>Envíos a todo el país</span>
             </div>
-          ))}
+            <div className="mini-trust-item">
+              <span className="trust-icon">🛡️</span>
+              <span>Garantía Oficial</span>
+            </div>
+            <div className="mini-trust-item">
+              <span className="trust-icon">⚡</span>
+              <span>Entrega Inmediata</span>
+            </div>
+          </div>
         </div>
-        
-        <div className="hero-scroll">↓</div>
+
+        {/* Right Column: Store Display Showcase Image */}
+        <div className="hero-showcase-col">
+          <div className="store-showcase-frame">
+            <img 
+              src="/assets/store-phones-display.jpg" 
+              alt="Tienda DrPhone Technology con smartphones en exhibición" 
+              className="store-showcase-img"
+              onError={(e) => {
+                e.target.src = '/assets/store-showroom.jpg';
+              }}
+            />
+            <div className="store-showcase-overlay">
+              <span className="store-live-pill">
+                <span className="live-dot"></span> Equipos en Exhibición
+              </span>
+              <p className="store-caption">DrPhone Technology • Santo Domingo, RD</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

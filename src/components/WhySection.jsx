@@ -5,23 +5,20 @@ export default function WhySection() {
   const { settings } = state;
   
   return (
-    <section className="why-section" id="why-drphone">
+    <section className="why-section compact-why-section" id="why-drphone">
       <div className="container">
-        <h2>
-          {settings.whyTitle.split('DrPhone').map((part, i, arr) => (
-            <span key={i}>
-              {part}
-              {i < arr.length - 1 && <span className="gradient-text">DrPhone</span>}
-            </span>
-          ))}
+        <h2 className="why-title-compact">
+          ¿Por qué comprar en <span className="gradient-text">DrPhone Technology</span>?
         </h2>
         
-        <p>{settings.whySubtitle}</p>
+        <p className="why-subtitle-compact">
+          {settings.whySubtitle}
+        </p>
         
-        <div className="stats-grid">
+        <div className="stats-grid compact-stats-grid">
           {settings.stats.map((stat, i) => (
-            <div className="stat-card" key={i}>
-              <div className="stat-card-icon">{stat.icon}</div>
+            <div className="stat-card compact-stat-card" key={i}>
+              <div className="stat-card-icon compact-stat-icon">{stat.icon}</div>
               <h3>{stat.value}</h3>
               <p>{stat.label}</p>
             </div>
